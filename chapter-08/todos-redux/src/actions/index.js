@@ -1,4 +1,7 @@
 let nextTodoId = 0
+
+// 定义action类型
+
 export const addTodo = (text) => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
