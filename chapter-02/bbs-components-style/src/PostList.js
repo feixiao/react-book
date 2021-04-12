@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PostItem from "./PostItem";
 import "./PostList.css";
 
+
+// create-react-app将public下的文件配置成可以在HTML页面中直接引用， 因此我们将style.css放置在public文件夹下。
+// 而PostList.css和PostItem.css是以模块的方式在JS文件中被导入的，因此放置在src文件夹下
 class PostList extends Component {
   constructor(props) {
     super(props);

@@ -1,7 +1,8 @@
 import React from "react";
 import "./PostItem.css";
-import like from "./images/like-default.png";
+import like from "./images/like-default.png"; //图标作为模块被导入
 
+// 通过className指定样式 
 function PostItem(props) {
   const handleClick = () => {
     props.onVote(props.post.id);
