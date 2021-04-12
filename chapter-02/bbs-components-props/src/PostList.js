@@ -13,6 +13,7 @@ class PostList extends Component {
         帖子列表：
         <ul>
           {data.map(item =>
+            // 传入参数
             <PostItem
               title={item.title}
               author={item.author}

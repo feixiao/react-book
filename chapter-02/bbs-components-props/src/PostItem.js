@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class PostItem extends Component {
   render() {
+    // 组件的props用于把父组件中的数据或方法传递给子组件， 供子组件使用
     const { title, author, date } = this.props;
     return (
       <li>
