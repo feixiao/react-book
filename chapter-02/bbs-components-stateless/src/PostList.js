@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import PostItem from "./PostItem";
 
+// 将PostList设计为有状态组件，负责帖子列表数据的获取以及点赞行为的处理，
+// 将PostItem设计为无状态组件， 只负责每一个帖子的展示。 
 class PostList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       posts: []
     };
-    this.timer = null;
-    this.handleVote = this.handleVote.bind(this);
+    this.timer = null;  // 定时器
+    this.handleVote = this.handleVote.bind(this); //ES 6class中， 必须手动绑定方法this的指向
   }
 
   componentDidMount() {
@@ -26,7 +28,7 @@ class PostList extends Component {
 
   componentWillUnmount() {
     if(this.timer) {
-      clearTimeout(this.timer);
+      clearTimeout(this.timer); // 清除定时器
     }
   }
 
@@ -36,6 +38,7 @@ class PostList extends Component {
       const newItem = item.id === id ? {...item, vote: ++item.vote} : item;
       return newItem;
     })
+    // 使用新的posts对象设置state
     this.setState({
       posts
     })

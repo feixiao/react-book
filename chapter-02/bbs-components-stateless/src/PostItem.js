@@ -1,5 +1,8 @@
 import React from "react";
 
+
+// 无状态组件，一般定义为函数组件，
+// state用来反映组件内部状态的变化，如果一个组件的内部状态是不变的，当然就用不到state， 这样的组件称之为无状态组件
 function PostItem(props) {
   const handleClick = () => {
     props.onVote(props.post.id);
