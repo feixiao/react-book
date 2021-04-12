@@ -15,4 +15,6 @@ class PostList extends Component {
   }
 }
 
+// 注意， 在定义组件之后， 使用ES 6 export将PostList作为默认模块导出，
+// 从而可以在其他JS文件中导入PostList使用。 
 export default PostList;
